@@ -1,0 +1,553 @@
+@font-face {
+    font-family: poppins;
+    src: url(/fonts/poppins/poppins-bolditalic.ttf);
+}
+
+@font-face {
+    font-family: corp;
+    src: url(/fonts/Co\ Headline\ Corp.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+#hero:not(:first-child){
+    padding: 0 0.75rem;
+}
+
+.header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10% ;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5% 0;
+    background: #d9d9d9;
+}
+
+
+.header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10% ;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5% 0;
+    background: linear-gradient(90deg, rgb(0, 158, 119) 0%, rgb(0, 153, 192) 100%, rgb(2, 127, 255) 200%, rgb(88, 86, 214) 300%, rgb(29, 29, 31) 400%);
+}
+
+#header:hover span{
+    color: white !important;
+}
+
+#header:hover span a{
+    color: white  !important;
+}
+
+
+.header-logo img{
+    width: 50%;
+    height: 20%;
+    padding-left: 30%;
+    cursor: pointer;
+}
+
+.main-nav-bar{
+    display: grid;
+    grid-template-columns:100%;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% ;
+    justify-content: center;
+    align-items: center;
+    column-gap: -50%;
+    justify-items: right;
+}
+
+nav span{
+    cursor: pointer;
+    padding: 5px;    
+
+}
+
+.main-nav-bar span:hover{
+    color: rgba(255, 255, 255, 0.493);
+}
+
+.main-nav-bar span a{
+    color: black;
+}
+
+.main-nav-bar span a:hover{
+    color: rgba(255, 255, 255, 0.5);
+}
+nav span:nth-child(2){
+    position: relative;
+}
+.services{
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 20%;
+    justify-content: center;
+    align-items: center;
+
+}
+.drop-down{
+position: absolute;
+opacity: 1;
+top: 25px;
+left: -20%;
+padding: 20px 15px;
+backdrop-filter: blur(50px);
+transform-origin: top;
+cursor: pointer;
+transform: scale(0);
+border-radius: 3px;
+background: transparent;
+z-index: 10;
+}
+
+.drop-down li:not(:first-child){
+    margin-top: 7px;
+}
+
+.drop-down a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.drop-down a:hover{
+    color: blue;
+    background-image: -webkit-linear-gradient(90deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.drop-down a{
+    /* margin-top: 5px; */
+}
+
+.services ul{
+    list-style: none;
+}
+
+.services:hover .drop-down{
+    transform: scale(1);
+    transition: ease-in-out 500ms;
+    /* z-index: -1; */
+}
+
+.fa-angle-down{
+padding-left: 10px;
+margin: 0;
+}
+
+.secondary-nav-bar {
+    background: #7e0664;
+    display: grid;
+    grid-template-columns: 100%;
+    width: fit-content;
+    padding: 7% 10%;
+    margin-left: -30%;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.874);
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+.secondary-nav-bar:hover a{
+    color: rgba(255, 255, 255, 0.774);
+
+
+}
+
+.secondary-nav-bar a{
+    color: rgba(255, 255, 255, 0.874);
+}
+
+.header .secondary-nav-bar{
+    color: #7e0664;
+    display: grid;
+    grid-template-columns: 100%;
+    width: fit-content;
+    padding: 7% 10%;
+    margin-left: -30%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+.fa-bars{
+padding-left: 10px;
+
+}
+
+.first-page{
+    display: grid;
+    width: 100%;
+    height: 105vh;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 10% 70% 20%;
+    justify-content: center;
+    justify-items: center;
+   background: linear-gradient(50deg,rgba(51, 51, 71),rgb(51, 51, 71,0.9));
+    backdrop-filter: blur(50px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200%;
+row-gap: 5%;
+animation: move 15s linear infinite;
+padding-top: 3%;
+position: relative;
+}
+
+@keyframes move{
+    0%{
+        background-position: 0% 50%;
+    }
+    
+    25%{
+        background-position: 100% 50%;
+    }
+
+        
+    50%{
+        background-position: 50% 0%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+button{
+    position: absolute;
+    bottom: 90%;
+    left: 75%;
+    background: transparent;
+    border: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 30%;
+}
+
+button i{
+    font-size: 150%;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.intro-text{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 2em;
+    color: aliceblue;
+    width: 100%;
+    letter-spacing: 1px; 
+}
+
+
+.intro-line{
+    content: " ";
+    grid-column: 3/-5;
+    grid-row: 1/2;
+    width: 100%;
+    border-bottom: 2px dashed aliceblue;
+    margin-bottom: 11.5%;
+    animation: typing 5s linear;
+    margin-left: -40%;
+}
+
+@keyframes typing{
+    0%{
+        width: 0%;
+    }
+    
+    10%{
+        width: 10%;
+    }
+
+    
+    20%{
+        width: 20%;
+    }  
+    
+    30%{
+        width: 30%;
+    }  
+    
+    40%{
+        width: 40%;
+    }  
+    
+    50%{
+        width: 50%;
+    }  
+    
+    60%{
+        width: 60%;
+    }
+
+    70%{
+        width: 70%;
+    }
+
+    80%{
+        width: 80%;
+    }
+
+    90%{
+        width: 90%;
+    }
+
+    100%{
+        width: 100%;
+    }
+
+}
+
+#hero-section{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 10% 10% 10%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    row-gap: 10%;
+    margin-top: -10%;
+}
+
+
+
+#hero-section h1{
+    font-size:  7em;
+}
+
+#hero-section h1:nth-child(1){
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+
+#hero-section h1:nth-child(1) span{
+    color: blue;
+    background: linear-gradient(90deg, rgb(0, 158, 119) 0%, rgb(0, 153, 192) 100%, rgb(2, 127, 255) 200%, rgb(88, 86, 214) 300%, rgb(29, 29, 31) 400%);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+
+#hero-section h1:nth-child(2){
+    grid-column: 1/-1;
+    grid-row: 2/3;
+
+}
+
+#hero-section h1:nth-child(2) span{
+    color: blue;
+    background-image: -webkit-linear-gradient(90deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+#hero-section h1:nth-child(3){
+    grid-column: 5/-1;
+    grid-row: 3/4;
+
+}
+
+#hero-section h1:nth-child(3) span{
+    color: blue;
+    background: linear-gradient(90deg, rgb(0, 158, 119) 0%, rgb(0, 153, 192) 100%, rgb(2, 127, 255) 200%, rgb(88, 86, 214) 300%, rgb(29, 29, 31) 400%);
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+
+}
+
+
+#hero-section:hover  h1{
+    color: white;
+    
+}
+
+#hero-section:hover  h1:nth-child(1) span{
+    color: blue;
+    background-image: -webkit-linear-gradient(90deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+}
+
+#hero-section:hover  h1:nth-child(2) span{
+    color: blue;
+    background: linear-gradient(90deg, rgb(0, 158, 119) 0%, rgb(0, 153, 192) 100%, rgb(2, 127, 255) 200%, rgb(88, 86, 214) 300%, rgb(29, 29, 31) 400%);;
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+}
+
+#hero-section:hover  h1:nth-child(3) span{
+    color: blue;
+    background-image: -webkit-linear-gradient(90deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+}
+
+.personnel{
+    grid-column: 7/-1;
+    grid-row: 3/-1;
+    margin-top: -50%;
+    background-image: -webkit-linear-gradient(90deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.personnel p{
+   font-size: 150%;
+    font-family: corp;
+    color: black;
+  
+    
+}
+
+
+
+#about-us{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    background: linear-gradient(50deg,rgba(31, 32, 51, 0.562),rgba(51, 51, 71),rgba(23, 23, 36, 0.9))
+ ;
+}
+
+#about-us:hover{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background: linear-gradient(50deg,rgba(23, 23, 36, 0.9),rgba(51, 51, 71),rgba(31, 32, 51, 0.562))
+ ;
+
+}
+
+.about-us-text{
+    width: 100%;
+    grid-column: 2/4;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.about-us-text h1{
+    text-align: center;
+    margin-bottom: 3%;
+    color: rgba(255, 255, 255, 0.671);
+    background: linear-gradient(120deg,white,white,blue,white,white);
+    background-size: 130%;
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    font-family: poppins;
+    font-size: 230%;
+    animation: move 1000ms 300ms;
+}
+
+@keyframes move{
+    0%{
+        background-position: 0% 50%;
+    }
+    
+    25%{
+        background-position: 100% 50%;
+    }
+
+        
+    50%{
+        background-position: 50% 0%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.about-us-text p{
+    width: 100%;
+    font-size: 100%;
+    font-family: corp;
+    word-spacing: 1.7px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.tools{
+    grid-column: 2/-2;
+    grid-row: 2/-1;
+}
+
+#about-us h2{
+    margin-top: 10%;
+    text-align: center;
+    margin-bottom: 3%;
+    color: rgba(255, 255, 255, 0.671);
+    background: linear-gradient(120deg,);
+    background-size: 130%;
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    font-family: corp;
+    font-size: 30%;
+    animation: move 15s infinite;
+}
+
+.tools-gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% 20%;
+}
+
+.tools-gallery a{
+    width: 80%;
+    height: 80%;
+    border-radius: 15%;
+}
+
+.tools-gallery img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+}

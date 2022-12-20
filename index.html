@@ -31,7 +31,7 @@
                                     </ul>
                                     </span> 
                                 </span>
-                            <span ><a href="">Case Study</a></span>
+                            <span ><a href="#case-study">Case Study</a></span>
                             <span > <a href="">Blog</a></span>
                         </nav>
                     </div>
@@ -75,6 +75,10 @@
                         HTML, Css, JavaScript, Wordpress, Excel, SQL ...
                         
                     </div>
+                    <div class="about-us-button">
+                        <a href="#">More...</a>
+                        
+                    </div>
                 </div>
                 
                
@@ -85,8 +89,33 @@
                 </audio>
             </i>
             </section>
+            <section class="case-study" id="case-study">
+                <h1>Case Studies (Project Worked On)</h1>
+                <div class="portfolio-slides">
+                <div class="portfolio-slide-1">
+                   <a href="https://tmfwinsome.com" title="TMFwinsome"><img src="images/1 (1).jpg">
+                </a> 
+                   
+                   <a href="https://tilzmart.com" title="Tilzmart"><img src="images/21.jpg"></a> 
+
+                   <a href="https://wokenationtv.com" title="Wokenationtv"><img src="images/26.jpg"></a> 
+
+                   <a href="https://picharge.com" title="Picharge"><img src="images/picharge.jpg"></a> 
+
+                   <a href="https://foodbank.com" title="Foodbank"><img src="images/foodbank.jpg"></a>  
+               
+                   <a href="https://adeniyisaleem.com" title="Adeniyi Saleem"><img src="images/adeniyi.jpg"></a> 
+                </div>
+                 </div>
+                </div>
+                <div class="case-study-button" >
+                    <a href="#">More...</a>
+                    
+                </div>
+            </section>
             </section>
 <script>
+    // bg audio pause and play function
     var x = document.getElementById("myAudio");
     function playAudio(){
         x.play()
@@ -95,17 +124,18 @@
     function pauseAudio(){
         x.pause()
     }
-   
+//    header changes coloronscroll
 const header = document.querySelector('.header');
 window.onscroll = function(){
     var top = window.scrollY;
     console.log(top);
-    if(top>=10){
+    if(top>=0.5){
         header.classList.add('active');
     }else{
         header.classList.remove('active');
 
     }
+    // end
 }
 </script>
           

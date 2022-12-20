@@ -37,7 +37,7 @@ a{
     justify-content: center;
     align-items: center;
     padding: 0.5% 0;
-    background: linear-gradient(90deg, rgb(29, 29, 31) 0%, rgb(88, 86, 214) 100%, rgb(2, 127, 255) 200%,rgb(0, 153, 192) 300%, rgb(0, 158, 119) 400%);
+    background: linear-gradient(75deg, rgb(29, 29, 31) 0%, rgb(88, 86, 214) 100%, rgb(2, 127, 255) 200%,rgb(0, 153, 192) 300%, rgb(0, 158, 119) 400%);
     z-index: 100;
 }
 
@@ -143,9 +143,7 @@ z-index: 10;
     text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
 }
-.drop-down a{
-    /* margin-top: 5px; */
-}
+
 
 .services ul{
     list-style: none;
@@ -154,7 +152,6 @@ z-index: 10;
 .services:hover .drop-down{
     transform: scale(1);
     transition: ease-in-out 500ms;
-    /* z-index: -1; */
 }
 
 .fa-angle-down{
@@ -250,6 +247,8 @@ button{
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 30%;
+    outline: none;
+    -moz-outline-style: none;
 }
 
 button i{
@@ -460,6 +459,7 @@ button:active{
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 50% 50%;
     background: linear-gradient(50deg,rgba(31, 32, 51, 0.562),rgba(51, 51, 71),rgba(23, 23, 36, 0.9)),url(images/p8.jpg);
+padding-bottom: 3%;
 }
 
 #about-us:hover{
@@ -479,7 +479,6 @@ button:active{
     justify-content: center;
     justify-items: center;
     margin-top: 20%;
-    /* position: relative; */
 }
 
 .about-us-text h1{
@@ -610,4 +609,130 @@ border-radius: 5px;
     width: 100%;
     height: 100%;
     border-radius: 2%;
+}
+
+
+.about-us-button{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+margin-top: 3%;
+
+}
+
+.about-us-button a{
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 120%;
+    font-family: corp;
+    background: linear-gradient(45deg,rgb(8, 8, 66),rgb(0, 0, 255));
+padding: 10% 25%;
+border-radius: 200px;
+transition: 1s ease-in-out;
+letter-spacing: 2px;
+}
+
+.about-us-button a:hover{
+    width: fit-content;
+    color: rgb(255, 255, 255);
+    font-size: 120%;
+    font-family: corp;
+    background: linear-gradient(80deg,rgb(8, 8, 66),rgba(0, 0, 255));
+padding: 10% 25%;
+border-radius: 200px;
+transition: 1s ease-in-out;
+letter-spacing: 2px;
+}
+
+.case-study{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(50deg,rgba(23, 23, 36, 0.9),rgba(51, 51, 71),rgba(31, 32, 51, 0.562)), url(images/case-study-bg.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10% 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+   align-content: center;
+}
+
+.case-study h1{
+    text-align: center;
+    margin-bottom: 3%;
+    color: rgba(255, 255, 255, 0.671);
+    background: -webkit-linear-gradient(120deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-family: poppins;
+    font-size: 200%;
+    animation: move 1000ms 300ms;
+}
+
+.portfolio-slide-1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-row: 100%;
+
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+   align-content: center;
+   column-gap: 5%;
+   row-gap: 3%;
+}
+
+.portfolio-slide-1 img{
+    width: 100%;
+    border-radius: 5%;
+    opacity: 0.7;
+
+}
+
+/* .portfolio-slide-1 a:hover{
+   background: linear-gradient(black,black);
+} */
+
+.portfolio-slide-1 img:hover{
+    width: 100%;
+    border-radius: 5%;
+    opacity: 1;
+
+    transform: scale(1.05);
+}
+
+.case-study-button a{
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 120%;
+    font-family: corp;
+    background: linear-gradient(45deg,rgb(8, 8, 66),rgb(0, 0, 255));
+padding: 10% 25%;
+border-radius: 200px;
+transition: 1s ease-in-out;
+letter-spacing: 2px;
+margin-top: 35%;
+display: inline-block;
+}
+
+.case-study-button a:hover{
+    width: fit-content;
+    color: rgb(255, 255, 255);
+    font-size: 120%;
+    font-family: corp;
+    background: linear-gradient(80deg,rgb(8, 8, 66),rgba(0, 0, 255));
+padding: 10% 25%;
+border-radius: 200px;
+transition: 1s ease-in-out;
+letter-spacing: 2px;
+margin-top: 35%;
+display: inline-block;
 }

@@ -450,6 +450,51 @@ button:active{
     
 }
 
+.social-links{
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    width: 10%;
+    background: transparent;
+    transform: rotateZ(360deg);
+}
+.social-links i{
+    font-size: 300%;
+    transform: rotateZ(270deg);
+    transition: 0.3s ease-in-out;
+
+}
+
+.social-links i:hover{
+    opacity: 0.7;
+    animation: i 2s ease-in-out;
+   
+}
+
+.social-links a:not(:first-child){
+    display: inline-block;
+   margin-top: 2%;
+}
+
+.instagram i{
+color: red;
+
+}
+
+.instagram i{
+    color: red;
+    
+    }
+
+.twitter i{
+    color: blue;
+    
+    }
+
+.linkedin i{
+        color: rgb(159, 159, 231);
+        
+        }
 
 
 #about-us{
@@ -460,6 +505,7 @@ button:active{
     grid-template-rows: 50% 50%;
     background: linear-gradient(50deg,rgba(31, 32, 51, 0.562),rgba(51, 51, 71),rgba(23, 23, 36, 0.9)),url(images/p8.jpg);
 padding-bottom: 3%;
+position: relative;
 }
 
 #about-us:hover{
@@ -469,8 +515,44 @@ padding-bottom: 3%;
     grid-template-columns: 25% 25% 25% 25%;
     background: linear-gradient(50deg,rgba(23, 23, 36, 0.9),rgba(51, 51, 71),rgba(31, 32, 51, 0.562)), url(images/p8.jpg)
  ;
+ padding-bottom: 3%;
+ position: relative;
 
 }
+
+.back-to-the-top{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    position: sticky;
+  top: 50%;
+  left: 95%;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  cursor: pointer;
+
+
+}
+
+.back-to-the-top:hover{
+    background: linear-gradient(50deg,rgba(0, 0, 0, 0.53),rgba(255, 255, 255, 0.301));
+
+}
+
+.back-to-the-top i{
+    font-size: 125%;
+    /* position: sticky; */
+    color: aliceblue;
+
+}
+
+
 
 .about-us-text{
     width: 100%;
@@ -694,18 +776,12 @@ letter-spacing: 2px;
     width: 100%;
     border-radius: 5%;
     opacity: 0.7;
-
 }
-
-/* .portfolio-slide-1 a:hover{
-   background: linear-gradient(black,black);
-} */
 
 .portfolio-slide-1 img:hover{
     width: 100%;
     border-radius: 5%;
-    opacity: 1;
-
+    opacity: 0.9;
     transform: scale(1.05);
 }
 
@@ -735,4 +811,195 @@ transition: 1s ease-in-out;
 letter-spacing: 2px;
 margin-top: 35%;
 display: inline-block;
+}
+
+
+
+
+
+@media (max-width: 1000px){
+
+
+    .header{
+        position: fixed;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10% 80% 10% ;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5% 0;
+        background: linear-gradient(75deg, rgb(29, 29, 31) 0%, rgb(88, 86, 214) 100%, rgb(2, 127, 255) 200%,rgb(0, 153, 192) 300%, rgb(0, 158, 119) 400%);
+        z-index: 100;
+    }
+    
+    .header.active{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10% 80% 10% ;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5% 0;
+        background: linear-gradient(90deg, rgb(0, 158, 119) 0%, rgb(0, 153, 192) 100%, rgb(2, 127, 255) 200%, rgb(88, 86, 214) 300%, rgb(29, 29, 31) 400%);
+    }
+    
+    #header:hover span{
+        color: white !important;
+    }
+    
+    #header:hover span a{
+        color: white  !important;
+    }
+    
+    
+    .header-logo img{
+        width: 70%;
+        height: 20%;
+        padding-left: 30%;
+        cursor: pointer;
+    }
+    
+    .main-nav-bar{
+        display: grid;
+        grid-template-columns:70%;
+    }
+    
+    nav{
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% ;
+        justify-content: center;
+        align-items: center;
+        column-gap: 5%;
+        justify-items: right;
+    }
+    
+    nav span{
+        cursor: pointer;
+        padding: 0;    
+    
+    }
+    
+    .main-nav-bar span:hover{
+        color: rgba(255, 255, 255, 0.493);
+    }
+    
+    .main-nav-bar span a{
+        color: black;
+    }
+    
+    .main-nav-bar span a:hover{
+        color: rgba(255, 255, 255, 0.5);
+    }
+    nav span:nth-child(2){
+        position: relative;
+    }
+    .services{
+        position: relative;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 20%;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2%;
+    
+    }
+    .drop-down{
+    position: absolute;
+    opacity: 1;
+    top: 25px;
+    left: -20%;
+    padding: 20px 15px;
+    backdrop-filter: blur(50px);
+    transform-origin: top;
+    cursor: pointer;
+    transform: scale(0);
+    border-radius: 3px;
+    background: transparent;
+    z-index: 10;
+    }
+    
+    .drop-down li:not(:first-child){
+        margin-top: 7px;
+    }
+    
+    .drop-down a{
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .drop-down a:hover{
+        color: blue;
+        background-image: -webkit-linear-gradient(90deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    
+    .services ul{
+        list-style: none;
+    }
+    
+    .services:hover .drop-down{
+        transform: scale(1);
+        transition: ease-in-out 500ms;
+    }
+    
+    .fa-angle-down{
+    padding-left: 10px;
+    margin: 0;
+    }
+    
+    .secondary-nav-bar {
+        background: #7e0664;
+        display: grid;
+        grid-template-columns: 100%;
+        width: fit-content;
+        padding: 7% 10%;
+        margin-left: -30%;
+        border-radius: 3px;
+        color: rgba(255, 255, 255, 0.874);
+        word-spacing: 1px;
+        letter-spacing: 1px;
+    }
+    
+    .secondary-nav-bar:hover a{
+        color: rgba(255, 255, 255, 0.774);
+    
+    
+    }
+    
+    .secondary-nav-bar a{
+        color: rgba(255, 255, 255, 0.874);
+    }
+    
+    .header .secondary-nav-bar{
+        color: #7e0664;
+        display: grid;
+        grid-template-columns: 100%;
+        width: fit-content;
+        padding: 12% 10%;
+        margin-left: -70%;
+        border-radius: 2px;
+        background: linear-gradient(90deg, rgb(237, 24, 106) 0%, rgb(255, 103, 0) 100%, rgb(255, 203, 57) 200%, rgb(29, 29, 31) 300%);;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+    }
+    
+    .fa-bars{
+    padding-left: 10px;
+    
+    }
+    
+
+
+    #hero-section h1{
+        font-size:  350%;
+    }
+
+    .back-to-the-top{
+        display: none;
+    }
 }
